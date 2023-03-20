@@ -36,11 +36,14 @@
                 new ProductReview(){ProductID = 25, UserID = 10, Rating =2, Review ="Bad", isLike = false },
             };
             // Display the details in list
-            foreach (var item in list)
-            {
-                Console.WriteLine($"Product ID: {item.ProductID}, User ID: {item.UserID}, Rating: {item.Rating}, Review: {item.Review}, Like: {item.isLike}");
-            }
-        
-    }
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine($"Product ID: {item.ProductID}, User ID: {item.UserID}, Rating: {item.Rating}, Review: {item.Review}, Like: {item.isLike}");
+            //}
+
+            ///UC2
+            Management.GetTopThree(list);
+
+        }
     }
 }
