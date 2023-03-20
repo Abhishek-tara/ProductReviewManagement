@@ -138,5 +138,15 @@ namespace ProductReviewManagement
                            product.Field<string>("Review"), product.Field<bool>("isLike"));
             PrintDataTable(products);
         }
+
+        // UC-12-------> print only products whose userid is 10
+        public void UserID(DataTable dataTable)
+        {
+            var products = from product in dataTable.AsEnumerable()
+                           where (product.Field<int>("UserID") == 10)
+                           select (product.Field<int>("ProductID"), product.Field<int>("UserID"), product.Field<int>("Rating"),
+                           product.Field<string>("Review"), product.Field<bool>("isLike"));
+            PrintDataTable(products);
+        }
     }
 }

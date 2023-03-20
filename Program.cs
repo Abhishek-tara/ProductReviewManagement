@@ -101,14 +101,18 @@ namespace ProductReviewManagement
             //Management.PrintTable(dataTable);
 
             //UC9
-            Management management = new Management();
+            //Management management = new Management();
             //management.PrintTrueTable(dataTable);
 
             //UC10
             //Management.AverageRating(dataTable);
 
             //UC11
-            management.ReviewIsBest(dataTable);
+            //management.ReviewIsBest(dataTable);
+
+            //UC12
+            Management managementId = new Management();
+            managementId.UserID(dataTable);
 
         }
     }
