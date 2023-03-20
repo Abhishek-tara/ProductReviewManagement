@@ -48,7 +48,10 @@
             //Management.RatingAboveThree(list);
 
             //UC4
-            Management.CountByReview(list);
+            //Management.CountByReview(list);
+
+            //UC5
+            Management.GetParticularFields(list);
 
         }
     }
