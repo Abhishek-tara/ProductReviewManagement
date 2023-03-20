@@ -42,7 +42,10 @@
             //}
 
             ///UC2
-            Management.GetTopThree(list);
+            //Management.GetTopThree(list);
+
+            //UC3
+            Management.RatingAboveThree(list);
 
         }
     }
