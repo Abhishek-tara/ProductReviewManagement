@@ -98,7 +98,11 @@ namespace ProductReviewManagement
             //Management.GetParticular(list);
 
             //UC8
-            Management.PrintTable(dataTable);
+            //Management.PrintTable(dataTable);
+
+            //UC9
+            Management management = new Management();
+            management.PrintTrueTable(dataTable);
 
         }
     }
