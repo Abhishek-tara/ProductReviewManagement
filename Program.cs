@@ -45,7 +45,10 @@
             //Management.GetTopThree(list);
 
             //UC3
-            Management.RatingAboveThree(list);
+            //Management.RatingAboveThree(list);
+
+            //UC4
+            Management.CountByReview(list);
 
         }
     }
