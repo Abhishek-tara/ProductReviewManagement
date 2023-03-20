@@ -1,4 +1,6 @@
-﻿namespace ProductReviewManagement
+﻿using System.Data;
+
+namespace ProductReviewManagement
 {
     class Program
     {
@@ -35,6 +37,42 @@
                 new ProductReview(){ProductID = 24, UserID = 9, Rating =4, Review ="Average", isLike = true },
                 new ProductReview(){ProductID = 25, UserID = 10, Rating =2, Review ="Bad", isLike = false },
             };
+
+            // UC8-- > Using DataTable
+            //table
+            DataTable dataTable = new DataTable();
+            //columns
+            dataTable.Columns.Add("ProductId", typeof(int));
+            dataTable.Columns.Add("UserId", typeof(int));
+            dataTable.Columns.Add("Rating", typeof(int));
+            dataTable.Columns.Add("Review", typeof(string));
+            dataTable.Columns.Add("isLike", typeof(bool));
+            //rows
+            dataTable.Rows.Add(1, 1, 3, "Bad", false);
+            dataTable.Rows.Add(2, 2, 2, "Bad", false);
+            dataTable.Rows.Add(3, 3, 1, "Bad", false);
+            dataTable.Rows.Add(4, 4, 5, "Good", true);
+            dataTable.Rows.Add(5, 5, 0, "Bad", false);
+            dataTable.Rows.Add(6, 6, 7, "Good", true);
+            dataTable.Rows.Add(7, 7, 10, "Best", true);
+            dataTable.Rows.Add(8, 8, 9, "Best", true);
+            dataTable.Rows.Add(9, 9, 8, "Best", true);
+            dataTable.Rows.Add(10, 10, 2, "Bad", false);
+            dataTable.Rows.Add(11, 11, 5, "Good", true);
+            dataTable.Rows.Add(12, 12, 9, "Best", true);
+            dataTable.Rows.Add(13, 13, 1, "Bad", false);
+            dataTable.Rows.Add(14, 14, 8, "Best", true);
+            dataTable.Rows.Add(15, 15, 3, "Bad", false);
+            dataTable.Rows.Add(16, 16, 7, "Good", true);
+            dataTable.Rows.Add(17, 17, 4, "Good", true);
+            dataTable.Rows.Add(18, 18, 2, "Bad", false);
+            dataTable.Rows.Add(19, 19, 3, "Bad", false);
+            dataTable.Rows.Add(20, 19, 1, "Bad", false);
+            dataTable.Rows.Add(21, 19, 10, "Best", true);
+            dataTable.Rows.Add(22, 19, 7, "Good", true);
+            dataTable.Rows.Add(23, 19, 8, "Best", true);
+            dataTable.Rows.Add(24, 19, 4, "Good", true);
+            dataTable.Rows.Add(25, 19, 2, "Bad", false);
             // Display the details in list
             //foreach (var item in list)
             //{
@@ -51,13 +89,16 @@
             //Management.CountByReview(list);
 
             //UC5
-           // Management.GetParticularFields(list);
+            // Management.GetParticularFields(list);
 
             //UC6
             //Management.SkipTopRecords(list);
 
             //UC7
-            Management.GetParticular(list);
+            //Management.GetParticular(list);
+
+            //UC8
+            Management.PrintTable(dataTable);
 
         }
     }
