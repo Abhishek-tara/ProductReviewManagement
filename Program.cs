@@ -51,7 +51,13 @@
             //Management.CountByReview(list);
 
             //UC5
-            Management.GetParticularFields(list);
+           // Management.GetParticularFields(list);
+
+            //UC6
+            //Management.SkipTopRecords(list);
+
+            //UC7
+            Management.GetParticular(list);
 
         }
     }
