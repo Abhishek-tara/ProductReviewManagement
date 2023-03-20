@@ -128,5 +128,15 @@ namespace ProductReviewManagement
                            select (product.Field<int>("Rating"))).Average();
             Console.WriteLine(average.ToString());
         }
+
+        //UC-11------> Retreive all records from the list who’s review message contain “Best”
+        public void ReviewIsBest(DataTable dataTable)
+        {
+            var products = from product in dataTable.AsEnumerable()
+                           where (product.Field<string>("Review").Contains("Best"))
+                           select (product.Field<int>("ProductID"), product.Field<int>("UserID"), product.Field<int>("Rating"),
+                           product.Field<string>("Review"), product.Field<bool>("isLike"));
+            PrintDataTable(products);
+        }
     }
 }

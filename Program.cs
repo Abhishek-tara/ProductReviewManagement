@@ -105,7 +105,10 @@ namespace ProductReviewManagement
             //management.PrintTrueTable(dataTable);
 
             //UC10
-            Management.AverageRating(dataTable);
+            //Management.AverageRating(dataTable);
+
+            //UC11
+            management.ReviewIsBest(dataTable);
 
         }
     }
