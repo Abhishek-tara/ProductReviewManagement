@@ -102,7 +102,10 @@ namespace ProductReviewManagement
 
             //UC9
             Management management = new Management();
-            management.PrintTrueTable(dataTable);
+            //management.PrintTrueTable(dataTable);
+
+            //UC10
+            Management.AverageRating(dataTable);
 
         }
     }
